@@ -1,0 +1,68 @@
+/* ===== GALLERY CARD ===== */
+.gallery-card {
+    border: none;
+    overflow: hidden;
+}
+
+/* ===== IMAGE WRAPPER ===== */
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* ===== IMAGE ===== */
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== OVERLAY WRITE-UP ===== */
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    /* LIGHT BLUE BACKGROUND */
+    background-color: rgba(173, 216, 230, 0.95);
+
+    color: #002b45;
+    padding: 12px 15px;
+    text-align: center;
+
+    /* ensures text stays inside */
+    box-sizing: border-box;
+}
+
+/* ===== OVERLAY TEXT ===== */
+.image-overlay h5 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.image-overlay p {
+    margin: 4px 0 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* ===== IMAGE HOVER EFFECT (OPTIONAL) ===== */
+.image-wrapper:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+    .image-overlay h5 {
+        font-size: 0.9rem;
+    }
+
+    .image-overlay p {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,48 @@
+/* Ensure images fill the card and maintain aspect ratio */
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+/* Hover effect */
+.card img:hover {
+    transform: scale(1.05);
+}
+
+/* Navbar logo styling */
+.logo .small-text {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.logo .large-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Modal arrows styling */
+#prevBtn, #nextBtn {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+}
+
+#prevBtn:hover, #nextBtn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Footer social links */
+.social-links a {
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}

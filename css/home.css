@@ -1,0 +1,512 @@
+/* nav */
+
+body {
+    font-family: sans-serif;
+
+}
+
+.logo {
+    line-height: 1.1;
+    padding-left: 40px;
+}
+
+.logo .small-text {
+    font-family: "Sedan SC", serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+.phdSmall {
+    font-size: x-small;
+}
+
+.logo .large-text {
+    font-family: "Sedan SC", serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #05339C;
+
+    /* red color like Pantami site */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* end of logo */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 50px;
+    background-color: #fff;
+    /* border-bottom: 1px solid #eee; */
+}
+
+.navbar-nav {
+    gap: 25px;
+    /* space between menu items */
+}
+
+.nav-link {
+    color: #05339C;
+    /* Katsina green */
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #393E46;
+    /* gold hover effect */
+}
+
+/* Hover dropdown only on large screens */
+@media (min-width: 992px) {
+    .navbar .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+        /* remove delay gap */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .nav-link {
+        padding: 6px 10px;
+        /* reduce padding */
+        font-size: 15px;
+        /* make text slightly smaller */
+    }
+
+    .navbar-nav {
+        gap: 10px;
+        /* reduce space between items */
+    }
+
+    .navbar {
+        padding-left: 10px;
+        padding-right: 10px;
+        /* reduce overall navbar padding */
+    }
+}
+
+
+/* second nav (main) */
+.carousel-item {
+    width: 100%;
+    height: 450px;
+    /* overflow: hidden; */
+
+}
+
+.carousel-image img {
+    width: 100%;
+    height: auto;
+
+
+}
+
+.carousel-image img .dcolor {
+    background-color: #81ecec;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 0;
+    box-shadow: 0 2px 5px #ccc;
+}
+
+/* 🌿 Katsina green (adjust if needed) */
+:root {
+    --katsina-green: #1e2be0;
+}
+
+/* Style the three dots (carousel indicators) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon [data-bs-target] {
+    background-color: var(--katsina-green);
+    width: 20px;
+    height: 12px;
+    border-radius: 50%;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: var(--katsina-green);
+    transform: scale(1.3);
+}
+
+/* Style the left and right navigation arrows */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--katsina-green);
+    /* green background */
+    border-radius: 50%;
+    /* make them round */
+    padding: 15px;
+    /* size of the circle */
+    background-size: 60%;
+    /* control arrow size */
+}
+
+/* Optional: add hover effect */
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #008000;
+    /* lighter green on hover */
+}
+
+
+/* 📱 For smaller screens (mobile phones) */
+@media (max-width: 768px) {
+    .carousel {
+        height: 300px;
+    }
+
+    .carousel-item img {
+        height: 300px;
+        /* smaller height for tablets/phones */
+    }
+}
+
+/* 📱 For very small screens (like older phones) */
+@media (max-width: 576px) {
+    .carousel {
+        height: 300px;
+    }
+
+    .carousel-item img {
+        height: 300px;
+    }
+}
+
+/* About Section*/
+.about-summary {
+    padding: 60px 10%;
+    background-color: #f8f9fa;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-image img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h2 {
+    color: #2780D9;
+    /* blue theme */
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.read-more-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #2780D9;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.read-more-btn:hover {
+    background-color: #05339C;
+}
+
+/* achievements sections*/
+
+.achievements-section {
+    position: relative;
+    background: url("../image/Dr5.jpg") no-repeat center center;
+    background-size: cover;
+    /* ensures the image covers the entire area */
+    background-position: center;
+    /* starts image from the top */
+    color: #fff;
+    min-height: 300px;
+    /* define section height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.achievements-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 50, 0.7);
+    z-index: 1;
+}
+
+.achievements-section .container {
+    position: relative;
+    z-index: 2;
+    /* keeps text visible on top */
+}
+
+/*  */
+
+.achievements-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.achievements-section h3 {
+    font-size: 2.2rem;
+    color: #fff;
+}
+
+.achievements-section p {
+    font-size: 1rem;
+    color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+    .achievements-section h3 {
+        font-size: 1.5rem;
+    }
+}
+
+.col .card {
+    margin-bottom: 20px;
+}
+
+/* Research and Publication */
+
+.publications {
+    background: #f9fbfd;
+    padding: 60px 10%;
+    border-radius: 10px;
+}
+
+.publications h2 {
+    text-align: center;
+    color: #2780D9;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.publication {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: #ffffff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.publication:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pub-icon {
+    font-size: 2rem;
+    color: #2780D9;
+    background: #e0f2f1;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pub-content h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.authors {
+    font-style: italic;
+    color: #555;
+    margin: 8px 0;
+}
+
+.read-btn {
+    color: #2780D9;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.read-btn:hover {
+    color: #3025DB;
+    text-decoration: underline;
+}
+
+
+.btnCustom {
+    color: #2780D9;
+    ;
+    /* text color */
+    border-color: #2780D9;
+    ;
+    /* border color */
+    border-radius: 8px;
+    /* make corners rounded */
+    padding: 8px 20px;
+    /* control size */
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.btnCustom:hover {
+    background-color: #3025DB;
+    /* green background */
+    color: white;
+    /* white text on hover */
+}
+
+/* General footer styling */
+.footer {
+    background: #154666;
+    color: #f1f1f1;
+    padding: 60px 20px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Brand column */
+.footer .brand h2 {
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+
+h2 span {
+    color: #2780D9;
+}
+
+.footer .brand p {
+    line-height: 1.6;
+    color: #bbb;
+}
+
+.brand h2 {
+    padding-bottom: 45px;
+
+}
+
+/* Social links */
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #fff;
+    background: #2780D9;
+    padding: 8px 10px;
+    border-radius: 50%;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    /* background: #7209b7; */
+    background: #41BDF2;
+}
+
+.footer-col a:hover {
+    color: #1e2be0;
+}
+
+/* Other columns */
+.footer-col h3 {
+    color: #fff;
+    font-size: 17px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.footer-col li {
+    font-size: 15px;
+}
+
+.footer-col h3::after {
+    content: '';
+    width: 40px;
+    height: 2px;
+    background: #2780D9;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin: 10px 0;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #bbb;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #A4BCFF;
+    text-decoration: underline;
+}
+
+/* Contact section */
+.contact p {
+    margin: 10px 0;
+    color: #bbb;
+}
+
+.contact i {
+    margin-right: 8px;
+    color: #2780D9
+}
+
+/* Footer bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid #222;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #aaa;
+}

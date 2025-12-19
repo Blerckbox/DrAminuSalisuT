@@ -1,0 +1,125 @@
+/* ===============================
+   RESET
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===============================
+   GALLERY CARD
+================================ */
+.gallery-card {
+    border: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* ===============================
+   IMAGE WRAPPER
+================================ */
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* ===============================
+   IMAGE
+================================ */
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* ===============================
+   WRITE-UP OVERLAY (LIGHT BLUE)
+================================ */
+.image-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    /* Light blue background */
+    background-color: rgba(173, 216, 230, 0.92);
+
+    color: #002b45;
+    padding: 12px 15px;
+    text-align: center;
+
+    /* Always visible */
+    opacity: 1;
+}
+
+/* Write-up text */
+.image-overlay h5 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.image-overlay p {
+    font-size: 0.9rem;
+    margin: 3px 0 0;
+    font-weight: 500;
+}
+
+/* ===============================
+   HOVER IMAGE EFFECT
+================================ */
+.image-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+/* ===============================
+   MOBILE OPTIMIZATION
+================================ */
+@media (max-width: 768px) {
+    .image-overlay h5 {
+        font-size: 1rem;
+    }
+
+    .image-overlay p {
+        font-size: 0.85rem;
+    }
+}
+
+/* ===============================
+   MODAL BUTTONS
+================================ */
+#prevBtn,
+#nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.85);
+    border: none;
+    font-size: 2rem;
+    padding: 6px 14px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+#prevBtn:hover,
+#nextBtn:hover {
+    background: #ffffff;
+}
+
+/* ===============================
+   CLOSE BUTTON
+================================ */
+#closeBtn {
+    margin-top: 15px;
+}
